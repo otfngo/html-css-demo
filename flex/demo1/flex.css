@@ -1,0 +1,32 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+main {
+  height: 100%;
+  width: 100%;
+}
+
+ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: stretch;
+  align-content: space-evenly;
+  list-style: none;
+  height: 100%;
+}
+
+li {
+  flex-basis: 300px;
+  flex-grow: 1;
+  flex-shrink: 0;
+  align-self: flex-start;
+  padding: 10px;
+  border: 1px solid black;
+  background-color: orangered;
+}
