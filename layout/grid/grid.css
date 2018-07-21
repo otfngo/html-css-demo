@@ -1,0 +1,19 @@
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-gap: 10px;
+  background: orange;
+  padding: 10px;
+}
+
+.grid-item {
+  background: orangered;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
+}
+
+.grid-item:nth-of-type(1) {
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
