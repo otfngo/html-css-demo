@@ -8,14 +8,14 @@ var height = canvas.height = window.innerHeight;
 
 // function to generate random number
 
-function random (min, max) {
+function random(min, max) {
   var num = Math.floor(Math.random() * (max - min)) + min;
   return num;
 }
 
 // define Ball constructor
 
-function Ball (x, y, velX, velY, color, size) {
+function Ball(x, y, velX, velY, color, size) {
   this.x = x;
   this.y = y;
   this.velX = velX;
@@ -26,7 +26,7 @@ function Ball (x, y, velX, velY, color, size) {
 
 // define ball draw method
 
-Ball.prototype.draw = function () {
+Ball.prototype.draw = function() {
   ctx.beginPath();
   ctx.fillStyle = this.color;
   ctx.arc(this.x, this.y, this.size, 0, 2 * Math.PI);
@@ -35,7 +35,7 @@ Ball.prototype.draw = function () {
 
 // define ball update method
 
-Ball.prototype.update = function () {
+Ball.prototype.update = function() {
   if ((this.x + this.size) >= width) {
     this.velX = -(this.velX);
   }
@@ -58,7 +58,7 @@ Ball.prototype.update = function () {
 
 // define ball collision detection
 
-Ball.prototype.collisionDetect = function () {
+Ball.prototype.collisionDetect = function() {
   for (var j = 0; j < balls.length; j++) {
     if (!(this === balls[j])) {
       var dx = this.x - balls[j].x;
@@ -78,7 +78,7 @@ var balls = [];
 
 // define loop that keeps drawing the scene constantly
 
-function loop () {
+function loop() {
   ctx.fillStyle = 'rgba(0,0,0,0.25)';
   ctx.fillRect(0, 0, width, height);
 
@@ -102,7 +102,5 @@ function loop () {
 
   requestAnimationFrame(loop);
 }
-
-
 
 loop();
